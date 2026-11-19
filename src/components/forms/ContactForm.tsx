@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Send, Loader2, CheckCircle2, AlertCircle, Mail, User, Phone, MessageSquare } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/academyData';
+import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -202,7 +203,7 @@ export function ContactForm() {
             </>
           ) : (
             <>
-              <MessageSquare className="w-4 h-4 text-white" />
+              <WhatsAppIcon className="w-4 h-4 text-white" />
               <span>Send Message to WhatsApp</span>
               <Send className="w-3.5 h-3.5 text-white/80" />
             </>

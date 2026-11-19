@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { AdmissionForm } from '@/components/forms/AdmissionForm';
 import { Shield, FileCheck } from 'lucide-react';
 import { ACADEMY_CONFIG } from '@/lib/academyData';
+import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
 
 export const metadata: Metadata = {
   title: 'Admissions & Enrollment | Cambridge AS & A Level Biology',
@@ -99,8 +100,9 @@ export default function AdmissionsPage() {
                 href={`https://wa.me/${ACADEMY_CONFIG.whatsappNumber}?text=Hello%20hCG%20Biology%20Academy,%20I%20have%20an%20admissions%20question.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-semibold text-white bg-dark-wine-700 hover:bg-dark-wine-800 transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-all transform hover:-translate-y-0.5 active:scale-95 group"
               >
+                <WhatsAppIcon className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                 <span>Direct WhatsApp Inquiry</span>
               </a>
             </div>

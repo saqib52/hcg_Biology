@@ -2,7 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { ACADEMY_CONFIG } from '@/lib/academyData';
-import { Mail, Phone, MapPin, MessageSquare, Globe, Shield } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Shield } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Admissions & Academic Inquiries',
@@ -48,9 +49,9 @@ export default function ContactPage() {
                 href={`https://wa.me/${ACADEMY_CONFIG.whatsappNumber}?text=Hello%20hCG%20Biology%20Academy,%20I%20would%20like%20to%20inquire%20about%20classes.`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-white bg-dark-wine-700 hover:bg-dark-wine-800 text-xs shadow-xs transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-bold text-white bg-emerald-600 hover:bg-emerald-700 text-xs shadow-sm transition-all transform hover:-translate-y-0.5 active:scale-95 group"
               >
-                <MessageSquare className="w-4 h-4 text-white" />
+                <WhatsAppIcon className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                 <span>Open WhatsApp Chat</span>
               </a>
             </div>

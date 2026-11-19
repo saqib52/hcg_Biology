@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { ACADEMY_CONFIG } from '@/lib/academyData';
-import { Mail, Phone, MapPin, MessageSquare, ShieldCheck, FileText, ArrowRight, Youtube, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, ShieldCheck, FileText, ArrowRight, Youtube, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export function Footer() {
   return (
@@ -138,9 +139,9 @@ export function Footer() {
                 href={`https://wa.me/${ACADEMY_CONFIG.whatsappNumber}?text=Hello%20hCG%20Biology%20Academy,%20I%20would%20like%20to%20inquire%20about%20admissions.`}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white hover:bg-sand-dune-50 text-ink-black-900 text-xs font-semibold border border-sand-dune-200 shadow-2xs transition-all active:scale-95"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white hover:bg-emerald-50 text-ink-black-900 hover:text-emerald-800 text-xs font-semibold border border-sand-dune-200 hover:border-emerald-300 shadow-2xs transition-all active:scale-95 group"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600 group-hover:scale-110 transition-transform" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>
