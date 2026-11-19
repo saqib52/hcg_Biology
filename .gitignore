@@ -1,0 +1,53 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js build output
+/.next/
+/out/
+/build/
+
+# Production
+dist
+
+# Environment variables & secrets (CRITICAL: Never commit these to Git)
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel deployment metadata
+.vercel
+
+# Local data & SQLite databases
+/data/
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs & Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+*.pem
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local tools & build caches
+/tools/
+*.tsbuildinfo
