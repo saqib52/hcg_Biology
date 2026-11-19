@@ -168,11 +168,6 @@ export function Footer() {
           <span className="font-medium text-dark-wine-800">Where Biology Comes to Life.</span>
         </div>
       </div>
-
-      {/* Oversized Watermark Footer Typography Spanning the Bottom Edge */}
-      <div className="w-full text-center select-none pointer-events-none overflow-hidden mt-6 -mb-4 opacity-[0.06] font-heading font-black tracking-tighter text-6xl sm:text-8xl md:text-9xl text-ink-black-900 uppercase">
-        hCG BIOLOGY ACADEMY
-      </div>
     </footer>
   );
 }

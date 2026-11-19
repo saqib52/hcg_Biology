@@ -302,7 +302,7 @@ export const ACADEMY_CONFIG = {
     facebook: '#',
     youtube: '#',
     instagram: '#',
-    linkedin: '#'
+    linkedin: 'https://www.linkedin.com/in/saqib-jawad-ai/'
   },
   disclaimer: 'hCG Biology Academy is an independent educational provider and is not affiliated with, endorsed by, or sponsored by Cambridge Assessment International Education.'
 };
