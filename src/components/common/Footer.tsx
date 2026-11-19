@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { ACADEMY_CONFIG } from '@/lib/academyData';
-import { Mail, Phone, MapPin, MessageSquare, ShieldCheck, FileText, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageSquare, ShieldCheck, FileText, ArrowRight, Youtube, Facebook, Instagram, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -28,37 +28,37 @@ export function Footer() {
                 href={ACADEMY_CONFIG.socialLinks.youtube}
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95"
+                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95 group"
                 aria-label="YouTube Channel"
               >
-                <span className="font-bold text-xs">YT</span>
+                <Youtube className="w-4 h-4 text-dark-wine-700 group-hover:text-white transition-colors" />
               </a>
               <a
                 href={ACADEMY_CONFIG.socialLinks.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95"
+                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95 group"
                 aria-label="Facebook Page"
               >
-                <span className="font-bold text-xs">FB</span>
+                <Facebook className="w-4 h-4 text-dark-wine-700 group-hover:text-white transition-colors" />
               </a>
               <a
                 href={ACADEMY_CONFIG.socialLinks.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95"
+                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95 group"
                 aria-label="Instagram Profile"
               >
-                <span className="font-bold text-xs">IG</span>
+                <Instagram className="w-4 h-4 text-dark-wine-700 group-hover:text-white transition-colors" />
               </a>
               <a
                 href={ACADEMY_CONFIG.socialLinks.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95"
+                className="w-8 h-8 rounded-xl bg-white hover:bg-dark-wine-700 hover:text-white text-dark-wine-700 flex items-center justify-center transition-all border border-sand-dune-200 shadow-2xs active:scale-95 group"
                 aria-label="LinkedIn Profile"
               >
-                <span className="font-bold text-xs">IN</span>
+                <Linkedin className="w-4 h-4 text-dark-wine-700 group-hover:text-white transition-colors" />
               </a>
             </div>
           </div>
