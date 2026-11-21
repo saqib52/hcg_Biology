@@ -129,7 +129,7 @@ export function AdmissionForm() {
       // Success
       setStatus({
         type: 'success',
-        message: 'Your admission application has been successfully received and securely saved.',
+        message: "Thank you for applying! You will receive a confirmation email. Please check your Spam/Junk folder too, and mark it as 'Not spam'. We will also contact you on WhatsApp within 24 hours.",
         applicationId: data.applicationId,
       });
 
@@ -180,24 +180,21 @@ export function AdmissionForm() {
 
       {/* Success Notification */}
       {status.type === 'success' && (
-        <div className="mb-8 p-6 rounded-2xl bg-sand-dune-100 border border-dark-wine-700/30 text-ink-black-900 animate-in fade-in shadow-xs">
-          <div className="flex items-start gap-3">
-            <CheckCircle2 className="w-6 h-6 text-dark-wine-600 flex-shrink-0 mt-0.5" />
-            <div>
-              <h3 className="text-base font-bold font-heading text-ink-black-900">
+        <div className="mb-8 p-6 rounded-2xl bg-pine-teal-50 border-2 border-pine-teal-300 text-ink-black-900 animate-in fade-in shadow-md">
+          <div className="flex items-start gap-3.5">
+            <CheckCircle2 className="w-6 h-6 text-pine-teal-700 flex-shrink-0 mt-0.5" />
+            <div className="space-y-2">
+              <h3 className="text-base font-bold font-heading text-dark-wine-900">
                 Application Submitted Successfully!
               </h3>
-              <p className="text-xs sm:text-sm text-ink-black-700 mt-1 leading-relaxed">
+              <p className="text-xs sm:text-sm text-ink-black-800 leading-relaxed font-medium">
                 {status.message}
               </p>
               {status.applicationId && (
-                <div className="mt-3 inline-block px-3 py-1 rounded-full bg-white border border-dark-wine-700/30 text-dark-wine-700 text-xs font-mono font-bold shadow-xs">
+                <div className="mt-2 inline-block px-3 py-1 rounded-full bg-white border border-pine-teal-300 text-pine-teal-800 text-xs font-mono font-bold shadow-xs">
                   Application ID: {status.applicationId}
                 </div>
               )}
-              <p className="text-xs text-ink-black-700 mt-2 font-medium">
-                Our admissions coordinator will contact you via WhatsApp and email to schedule your preliminary diagnostic meeting.
-              </p>
             </div>
           </div>
         </div>

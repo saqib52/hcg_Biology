@@ -194,7 +194,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: 'Your admission application has been successfully submitted and logged.',
+        message: "Thank you for applying! You will receive a confirmation email. Please check your Spam/Junk folder too, and mark it as 'Not spam'. We will also contact you on WhatsApp within 24 hours.",
         applicationId: application.id,
       },
       { status: 201 }
