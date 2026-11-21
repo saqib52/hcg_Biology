@@ -15,6 +15,7 @@ export interface AdmissionApplication {
   learningMode: string;
   academicBackground?: string;
   preferredTiming?: string;
+  source?: string;
   message?: string;
   status: 'pending' | 'reviewed' | 'accepted' | 'contacted';
   createdAt: string;

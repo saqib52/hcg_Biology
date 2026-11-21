@@ -15,7 +15,8 @@ import {
   MapPin,
   Building2,
   BookOpen,
-  Clock
+  Clock,
+  HelpCircle
 } from 'lucide-react';
 
 export function AdmissionForm() {
@@ -31,7 +32,7 @@ export function AdmissionForm() {
     learningMode: 'Live classes',
     academicBackground: '',
     preferredTiming: '',
-    message: '',
+    source: '',
   });
 
   const [loading, setLoading] = useState(false);
@@ -146,7 +147,7 @@ export function AdmissionForm() {
         learningMode: 'Live classes',
         academicBackground: '',
         preferredTiming: '',
-        message: '',
+        source: '',
       });
     } catch (err: any) {
       setStatus({
@@ -442,19 +443,29 @@ export function AdmissionForm() {
           </div>
         </div>
 
-        {/* Row 6: Additional Message */}
+        {/* Row 6: How did you hear about us? */}
         <div>
           <label className="block text-xs font-bold uppercase tracking-wider text-ink-black-900 mb-2">
-            Additional Message or Specific Learning Goals (Optional)
+            How did you hear about us?
           </label>
-          <textarea
-            name="message"
-            rows={4}
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Share any specific topics you find challenging, target exam series (e.g. May/June or Oct/Nov), or medical school aspirations..."
-            className="w-full px-4 py-3 rounded-2xl border border-sand-dune-200 text-sm bg-alice-blue-50 text-ink-black-900 focus:outline-none focus:ring-2 focus:ring-[#772222]"
-          />
+          <div className="relative">
+            <HelpCircle className="w-4 h-4 text-ink-black-700/60 absolute left-3.5 top-3.5 pointer-events-none" />
+            <select
+              name="source"
+              value={formData.source}
+              onChange={handleChange}
+              className="w-full pl-10 pr-4 py-3 rounded-2xl border border-sand-dune-200 text-sm bg-alice-blue-50 text-ink-black-900 focus:outline-none focus:ring-2 focus:ring-[#772222] appearance-none"
+            >
+              <option value="">Select how you found us</option>
+              <option value="Friends/Family">Friends/Family</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="School/College">School/College</option>
+              <option value="Google">Google</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
         </div>
 
         {/* Submit Button */}

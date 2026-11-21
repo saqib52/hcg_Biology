@@ -72,6 +72,7 @@ async function forwardToGoogleForm(data: Record<string, string>) {
       learningMode: process.env.GOOGLE_FORM_ENTRY_LEARNING_MODE,
       academicBackground: process.env.GOOGLE_FORM_ENTRY_BACKGROUND,
       preferredTiming: process.env.GOOGLE_FORM_ENTRY_TIMING,
+      source: process.env.GOOGLE_FORM_ENTRY_SOURCE,
       message: process.env.GOOGLE_FORM_ENTRY_MESSAGE,
     };
 
@@ -113,6 +114,7 @@ export async function POST(req: NextRequest) {
       learningMode,
       academicBackground,
       preferredTiming,
+      source,
       message,
     } = body;
 
@@ -172,6 +174,7 @@ export async function POST(req: NextRequest) {
       learningMode,
       academicBackground: academicBackground?.trim() || 'Studied IGCSE/O-Level',
       preferredTiming: preferredTiming?.trim() || 'Evening',
+      source: source?.trim() || 'Other',
       message: message?.trim() || '',
     });
 
@@ -188,6 +191,7 @@ export async function POST(req: NextRequest) {
       learningMode,
       academicBackground: academicBackground?.trim() || 'Studied IGCSE/O-Level',
       preferredTiming: preferredTiming?.trim() || 'Evening',
+      source: source?.trim() || 'Other',
       message: message?.trim() || '',
     });
 
