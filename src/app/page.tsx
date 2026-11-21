@@ -1,5 +1,4 @@
 import { Hero } from '@/components/home/Hero';
-import { WhyChooseUs } from '@/components/home/WhyChooseUs';
 import { FeaturedCourses } from '@/components/home/FeaturedCourses';
 import { LearningExperience } from '@/components/home/LearningExperience';
 import { TeacherProfileSection } from '@/components/home/TeacherProfileSection';
@@ -11,7 +10,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <WhyChooseUs />
       <FeaturedCourses />
       <LearningExperience />
       <TeacherProfileSection />
