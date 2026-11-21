@@ -8,7 +8,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary brand & high-impact accents (Royal Academic Navy / Sapphire)
+        // Requested Deep Teal / Sea Green shade (#35605A)
+        'pine-teal': {
+          50: '#f0f6f5',
+          100: '#dceae7',
+          200: '#bbd6d1',
+          300: '#94bdb7',
+          400: '#6ea099',
+          500: '#4d837c',
+          600: '#3c6e67',
+          700: '#35605A', // Base target hex: #35605A
+          800: '#2c4d48',
+          900: '#243e3a',
+          950: '#152422',
+        },
+        // Rich Royal Blue / Academic Navy scale
         'dark-wine': {
           50: '#eef6ff',
           100: '#dbeafe',
@@ -16,11 +30,11 @@ module.exports = {
           300: '#93c5fd',
           400: '#60a5fa',
           500: '#3b82f6',
-          600: '#1d4ed8', // Vibrant interactive blue
-          700: '#1e3a8a', // Deep Royal Navy (Buttons, Key Headers)
-          800: '#172554', // Dark Academic Navy
-          900: '#0f172a', // Deepest Navy
-          950: '#080d1a',
+          600: '#2563eb', // Vibrant royal blue
+          700: '#1d4ed8', // Interactive royal blue
+          800: '#1e3a8a', // Deep Academic Navy
+          900: '#0f2042', // Midnight Navy
+          950: '#0a1428',
         },
         // Secondary structural neutral & border surfaces (Warm crisp slate / mist)
         'sand-dune': {
@@ -36,14 +50,14 @@ module.exports = {
           900: '#0f172a',
           950: '#020617',
         },
-        // Dominant canvas & soft tint (Clean Modern Slate / Crisp Pure Backdrops)
+        // Subtle soft tint / Ice Blue for clean contrast
         'alice-blue': {
-          50: '#f8fafc',  // Clean, crisp, luminous canvas
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#0284c7', // Medical Cyan / Biology Accent
+          50: '#f1f5f9',
+          100: '#e2e8f0',
+          200: '#cbd5e1',
+          300: '#94a3b8',
+          400: '#64748b',
+          500: '#0284c7',
           600: '#0369a1',
           700: '#075985',
           800: '#0c4a6e',

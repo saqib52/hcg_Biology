@@ -15,42 +15,50 @@ export function LearningExperience() {
     {
       icon: Laptop,
       title: 'Interactive Live Online Classes',
-      description: 'Engaging real-time lectures with live discussion, screen-annotated diagrams, and active student question-and-answer checkpoints.'
+      description: 'Engaging real-time lectures with live discussion, screen-annotated diagrams, and active student question-and-answer checkpoints.',
+      accent: 'blue'
     },
     {
       icon: Video,
       title: 'Recorded Lecture Access',
-      description: 'Missed a class or need revision before mocks? Revisit full-length recordings on-demand anytime throughout your academic session.'
+      description: 'Missed a class or need revision before mocks? Revisit full-length recordings on-demand anytime throughout your academic session.',
+      accent: 'teal'
     },
     {
       icon: Layers,
       title: 'Topic-Wise Explanations',
-      description: 'Syllabus chapters unpacked systematically into clear conceptual milestones, linking molecular processes directly to physiological outcomes.'
+      description: 'Syllabus chapters unpacked systematically into clear conceptual milestones, linking molecular processes directly to physiological outcomes.',
+      accent: 'blue'
     },
     {
       icon: FileText,
       title: 'Downloadable Revision Notes',
-      description: 'Succinct, beautifully formatted digital summary notes and diagrammatic cheat-sheets aligned specifically with Cambridge examiner expectations.'
+      description: 'Succinct, beautifully formatted digital summary notes and diagrammatic cheat-sheets aligned specifically with Cambridge examiner expectations.',
+      accent: 'teal'
     },
     {
       icon: CheckCircle,
       title: 'Past Paper Discussions',
-      description: 'Class-by-class dissection of actual Cambridge examination questions, uncovering deceptive question stems and examiner trick points.'
+      description: 'Class-by-class dissection of actual Cambridge examination questions, uncovering deceptive question stems and examiner trick points.',
+      accent: 'blue'
     },
     {
       icon: Target,
       title: 'Practice Questions & Assessments',
-      description: 'Structured topical homework assignments designed to test both multiple-choice retention and long-response biological reasoning.'
+      description: 'Structured topical homework assignments designed to test both multiple-choice retention and long-response biological reasoning.',
+      accent: 'teal'
     },
     {
       icon: BarChart3,
       title: 'Progress Assessments',
-      description: 'Regular diagnostic assessments providing transparent insights into student strengths and specific topics requiring targeted review.'
+      description: 'Regular diagnostic assessments providing transparent insights into student strengths and specific topics requiring targeted review.',
+      accent: 'blue'
     },
     {
       icon: Sparkles,
       title: 'Examination Preparation Sessions',
-      description: 'Pre-exam bootcamps focusing heavily on time management, command words (explain vs describe vs suggest), and mark-scheme precision.'
+      description: 'Pre-exam bootcamps focusing heavily on time management, command words (explain vs describe vs suggest), and mark-scheme precision.',
+      accent: 'teal'
     }
   ];
 
@@ -59,7 +67,7 @@ export function LearningExperience() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-wider text-dark-wine-700 bg-sand-dune-100 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-dark-wine-700/20">
+          <span className="text-xs font-semibold uppercase tracking-wider text-pine-teal-700 bg-pine-teal-50 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-pine-teal-200">
             Pedagogy & Delivery
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-black-900 font-heading tracking-tight">
@@ -73,15 +81,27 @@ export function LearningExperience() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {points.map((pt, idx) => {
             const Icon = pt.icon;
+            const isTeal = pt.accent === 'teal';
+
             return (
               <div 
                 key={idx}
-                className="p-6 rounded-3xl bg-alice-blue-50 border border-sand-dune-200 hover:border-dark-wine-700/40 hover:bg-sand-dune-50 transition-all duration-300 group"
+                className={`p-6 rounded-3xl border transition-all duration-300 group ${
+                  isTeal
+                    ? 'bg-gradient-to-b from-pine-teal-50/50 to-white border-pine-teal-200 hover:border-[#35605A] hover:shadow-md'
+                    : 'bg-gradient-to-b from-blue-50/50 to-white border-blue-200 hover:border-dark-wine-700 hover:shadow-md'
+                }`}
               >
-                <div className="w-10 h-10 rounded-2xl bg-sand-dune-100 text-dark-wine-700 group-hover:bg-dark-wine-700 group-hover:text-white flex items-center justify-center mb-4 transition-colors">
-                  <Icon className="w-5 h-5" />
+                <div 
+                  className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110 shadow-xs ${
+                    isTeal
+                      ? 'bg-pine-teal-100 text-[#35605A] group-hover:bg-[#35605A] group-hover:text-white'
+                      : 'bg-blue-100 text-dark-wine-800 group-hover:bg-dark-wine-700 group-hover:text-white'
+                  }`}
+                >
+                  <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-base font-bold text-ink-black-900 font-heading mb-2">
+                <h3 className="text-lg font-bold text-ink-black-900 font-heading mb-2">
                   {pt.title}
                 </h3>
                 <p className="text-xs text-ink-black-700 leading-relaxed">
