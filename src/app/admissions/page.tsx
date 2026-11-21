@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
 export default function AdmissionsPage() {
   return (
-    <div className="py-16 sm:py-20 bg-alice-blue-50">
+    <div className="py-16 sm:py-20 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-semibold uppercase tracking-wider text-dark-wine-700 bg-sand-dune-100 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-dark-wine-700/20">
+          <span className="text-xs font-semibold uppercase tracking-wider text-pine-teal-700 bg-pine-teal-50 px-3.5 py-1.5 rounded-full inline-block mb-3 border border-pine-teal-200">
             Admissions & Enrollment
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-ink-black-900 font-heading tracking-tight">
@@ -41,13 +41,13 @@ export default function AdmissionsPage() {
             {/* Enrollment Process Steps */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-sand-dune-200 shadow-sm space-y-5">
               <h3 className="text-base font-bold font-heading text-ink-black-900 flex items-center gap-2">
-                <FileCheck className="w-5 h-5 text-dark-wine-600" />
+                <FileCheck className="w-5 h-5 text-pine-teal-700" />
                 <span>Admission Process</span>
               </h3>
 
               <div className="space-y-4 text-xs sm:text-sm text-ink-black-700">
                 <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-sand-dune-100 text-dark-wine-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-6 h-6 rounded-full bg-pine-teal-100 text-pine-teal-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     1
                   </span>
                   <div>
@@ -57,7 +57,7 @@ export default function AdmissionsPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-sand-dune-100 text-dark-wine-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-6 h-6 rounded-full bg-blue-100 text-dark-wine-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     2
                   </span>
                   <div>
@@ -67,7 +67,7 @@ export default function AdmissionsPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-sand-dune-100 text-dark-wine-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-6 h-6 rounded-full bg-pine-teal-100 text-pine-teal-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     3
                   </span>
                   <div>
@@ -77,7 +77,7 @@ export default function AdmissionsPage() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="w-6 h-6 rounded-full bg-sand-dune-100 text-dark-wine-700 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="w-6 h-6 rounded-full bg-blue-100 text-dark-wine-800 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                     4
                   </span>
                   <div>
@@ -88,19 +88,19 @@ export default function AdmissionsPage() {
               </div>
             </div>
 
-            {/* Quick WhatsApp Assistance */}
-            <div className="bg-sand-dune-100 text-ink-black-900 rounded-3xl p-6 sm:p-8 border border-dark-wine-700/30 space-y-4 shadow-xs">
-              <h3 className="text-base font-bold font-heading text-ink-black-900">
+            {/* Quick WhatsApp Assistance: Deep Blue & #35605A Accent Card */}
+            <div className="bg-gradient-to-br from-[#0c2340] via-[#153e5c] to-[#35605A] text-white rounded-3xl p-6 sm:p-8 border border-blue-400/30 space-y-4 shadow-xl">
+              <h3 className="text-base font-bold font-heading text-white">
                 Need Immediate Assistance?
               </h3>
-              <p className="text-xs text-ink-black-700 leading-relaxed">
+              <p className="text-xs text-slate-100 leading-relaxed">
                 If you have questions regarding syllabus tracks, timezone compatibility, or past paper sessions, chat with our admissions desk directly:
               </p>
               <a
                 href={`https://wa.me/${ACADEMY_CONFIG.whatsappNumber}?text=Hello%20hCG%20Biology%20Academy,%20I%20have%20an%20admissions%20question.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-sm transition-all transform hover:-translate-y-0.5 active:scale-95 group"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95 group"
               >
                 <WhatsAppIcon className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                 <span>Direct WhatsApp Inquiry</span>
@@ -109,7 +109,7 @@ export default function AdmissionsPage() {
 
             {/* Cambridge Disclaimer */}
             <div className="p-4 rounded-2xl bg-white border border-sand-dune-200 text-xs text-ink-black-700 flex items-start gap-2.5">
-              <Shield className="w-4 h-4 text-dark-wine-600 flex-shrink-0 mt-0.5" />
+              <Shield className="w-4 h-4 text-pine-teal-700 flex-shrink-0 mt-0.5" />
               <span>
                 {ACADEMY_CONFIG.disclaimer}
               </span>
