@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  ArrowRight, 
-  Sparkles, 
-  CheckCircle2, 
-  BookOpen, 
-  Award, 
-  GraduationCap, 
-  Dna, 
-  Microscope, 
+import {
+  ArrowRight,
+  Sparkles,
+  CheckCircle2,
+  BookOpen,
+  Award,
+  GraduationCap,
+  Dna,
+  Microscope,
   FileCheck2,
   Clock,
   Users2
@@ -29,7 +29,7 @@ export function Hero() {
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-sand-dune-200 text-pine-teal-700 text-xs sm:text-sm font-semibold tracking-wide shadow-xs">
             <Sparkles className="w-4 h-4 text-dark-wine-600 animate-pulse" />
-            <span>Cambridge International AS & A Level Biology (9700)</span>
+            <span>Cambridge IGCSE & O Level (0610 / 5090) • AS & A Level (9700)</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] leading-[1.08] text-ink-black-900 font-heading">
@@ -43,7 +43,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-xl text-ink-black-700 leading-relaxed max-w-2xl mx-auto font-normal">
-            Experience Cambridge 9700 through postgraduate zoology instruction, visual diagram mechanics, and systematic mark-scheme deconstruction.
+            Experience Cambridge IGCSE, O Level, and AS & A Level Biology through qualified instructors, simulator virtual labs, and systematic mark-scheme deconstruction.
           </p>
 
           {/* Tactile Action Buttons */}
@@ -78,7 +78,7 @@ export function Hero() {
                 <span className="text-xs font-bold uppercase tracking-wider text-pine-teal-700">Verified Educator Leadership</span>
               </div>
               <span className="text-xs font-semibold text-pine-teal-700 bg-pine-teal-50 px-3 py-1 rounded-full border border-pine-teal-200">
-                Cambridge 9700
+                Cambridge 0610 • 5090 • 9700
               </span>
             </div>
 
@@ -143,7 +143,7 @@ export function Hero() {
                   <Dna className="w-5 h-5 text-blue-200" />
                 </div>
                 <span className="text-[11px] font-bold text-emerald-300 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
-                  Complete 9700 Coverage
+                  Complete Cambridge Coverage
                 </span>
               </div>
 
@@ -154,23 +154,33 @@ export function Hero() {
                 Step-by-step deconstruction of cellular organelles, biochemical cycles, gene expression, and ecosystem dynamics.
               </p>
 
-              <div className="mt-5 space-y-2.5">
-                <div className="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-between">
+              <div className="mt-4 space-y-2">
+                <div className="p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                  <div>
+                    <span className="block text-xs font-bold text-white">IGCSE & O Level Biology</span>
+                    <span className="text-[11px] text-blue-200">Sections 1 to 7 • Syllabus 0610 & 5090</span>
+                  </div>
+                  <span className="text-[11px] font-bold text-dark-wine-900 bg-white px-2 py-0.5 rounded-lg">
+                    Sections 1–7
+                  </span>
+                </div>
+
+                <div className="p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-between">
                   <div>
                     <span className="block text-xs font-bold text-white">AS Level Biology</span>
                     <span className="text-[11px] text-blue-200">Chapters 1 to 11 • Papers 1, 2 & 3</span>
                   </div>
-                  <span className="text-[11px] font-bold text-dark-wine-900 bg-white px-2.5 py-1 rounded-lg">
+                  <span className="text-[11px] font-bold text-dark-wine-900 bg-white px-2 py-0.5 rounded-lg">
                     Units 1–11
                   </span>
                 </div>
 
-                <div className="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                <div className="p-2.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-between">
                   <div>
                     <span className="block text-xs font-bold text-white">A2 Level Biology</span>
                     <span className="text-[11px] text-blue-200">Chapters 12 to 19 • Papers 4 & 5</span>
                   </div>
-                  <span className="text-[11px] font-bold text-dark-wine-900 bg-white px-2.5 py-1 rounded-lg">
+                  <span className="text-[11px] font-bold text-dark-wine-900 bg-white px-2 py-0.5 rounded-lg">
                     Units 12–19
                   </span>
                 </div>
@@ -249,7 +259,10 @@ export function Hero() {
           <div className="relative overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
             <div className="animate-marquee space-x-8 text-xs font-semibold text-ink-black-700 py-2">
               <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
-                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge 9700 AS & A Level
+                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge IGCSE & O Level (0610 / 5090)
+              </span>
+              <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
+                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge AS & A Level (9700)
               </span>
               <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
                 <Award className="w-3.5 h-3.5 text-dark-wine-700" /> MS Zoology Gold Medalist Direction
@@ -265,7 +278,10 @@ export function Hero() {
               </span>
               {/* Duplicate set for seamless continuous marquee */}
               <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
-                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge 9700 AS & A Level
+                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge IGCSE & O Level (0610 / 5090)
+              </span>
+              <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
+                <Microscope className="w-3.5 h-3.5 text-pine-teal-700" /> Cambridge AS & A Level (9700)
               </span>
               <span className="px-4 py-2 rounded-xl bg-white border border-sand-dune-200 shadow-2xs flex items-center gap-2">
                 <Award className="w-3.5 h-3.5 text-dark-wine-700" /> MS Zoology Gold Medalist Direction

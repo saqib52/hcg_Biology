@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, GraduationCap, CheckCircle2, Sparkles, MessageCircle } from 'lucide-react';
+import { ArrowRight, GraduationCap, CheckCircle2, Sparkles } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
+import { ACADEMY_CONFIG } from '@/lib/academyData';
 
 export function AdmissionCTA() {
   return (
@@ -45,13 +47,15 @@ export function AdmissionCTA() {
                 <ArrowRight className="w-4 h-4 text-dark-wine-900" />
               </Link>
               
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 backdrop-blur-md transition-all active:scale-[0.98]"
+              <a
+                href={`https://wa.me/${ACADEMY_CONFIG.whatsappNumber}?text=Hello%20hCG%20Biology%20Academy,%20I%20would%20like%20to%20talk%20to%20an%20academic%20advisor.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm text-white bg-white/10 hover:bg-white/20 border border-white/25 backdrop-blur-md transition-all active:scale-[0.98]"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-300" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-300 group-hover:scale-110 transition-transform" />
                 <span>Talk to an Academic Advisor</span>
-              </Link>
+              </a>
             </div>
 
             {/* Verified Benefits */}
@@ -60,7 +64,7 @@ export function AdmissionCTA() {
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Free diagnostic discussion
               </span>
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Cambridge 9700 aligned
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Cambridge IGCSE, O Level & A Level aligned
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" /> Live & recorded flexibility
