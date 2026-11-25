@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ACADEMY_COURSES } from '@/lib/academyData';
-import { ArrowRight, Check, BookOpen, Clock, Calendar } from 'lucide-react';
+import { ArrowRight, Check, Clock, Calendar } from 'lucide-react';
 
 export function FeaturedCourses() {
   return (
@@ -104,40 +104,15 @@ export function FeaturedCourses() {
                     </div>
                   </div>
 
-                  {/* Footer with Pricing Placeholder & CTAs */}
-                  <div className="pt-5 border-t border-sand-dune-200 space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <span className="text-[11px] uppercase tracking-wider text-ink-black-700 block font-semibold">Tuition Investment</span>
-                        <span className="text-sm font-bold text-ink-black-900 bg-sand-dune-50 px-3 py-1 rounded-full border border-sand-dune-200 inline-block mt-0.5">
-                          {course.feePlaceholder}
-                        </span>
-                      </div>
-                      <Link
-                        href={`/courses/${course.slug}`}
-                        className="text-xs font-bold text-pine-teal-700 hover:text-dark-wine-800 hover:underline flex items-center gap-1"
-                      >
-                        <span>Syllabus Breakdown</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                      <Link
-                        href={`/admissions?course=${course.id}`}
-                        className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-dark-wine-800 to-pine-teal-700 hover:opacity-95 shadow-md active:scale-95 transition-all text-center"
-                      >
-                        <span>Enroll in this Course</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                      <Link
-                        href={`/courses/${course.slug}`}
-                        className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-xs text-ink-black-900 bg-white hover:bg-sand-dune-50 border border-sand-dune-200 shadow-2xs active:scale-95 transition-all text-center"
-                      >
-                        <BookOpen className="w-3.5 h-3.5 text-dark-wine-600" />
-                        <span>View Unit Breakdown</span>
-                      </Link>
-                    </div>
+                  {/* Footer with Enrollment Action */}
+                  <div className="pt-5 border-t border-sand-dune-200">
+                    <Link
+                      href={`/admissions?course=${course.id}`}
+                      className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-dark-wine-800 via-[#153e5c] to-pine-teal-700 hover:opacity-95 shadow-md active:scale-[0.98] transition-all text-center"
+                    >
+                      <span>Enroll in this Course</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
                 </div>
               </div>
