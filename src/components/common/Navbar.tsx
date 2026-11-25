@@ -24,6 +24,7 @@ export function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Meet the Teacher', href: '/teacher' },
     { name: 'Courses', href: '/courses' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Fees', href: '/fees' },
     { name: 'Admissions', href: '/admissions' },
     { name: 'Testimonials', href: '/testimonials' },

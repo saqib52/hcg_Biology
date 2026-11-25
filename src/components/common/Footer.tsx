@@ -78,6 +78,12 @@ export function Footer() {
                 <Link href="/teacher" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">Meet the Teacher</Link>
               </li>
               <li>
+                <Link href="/courses" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">Courses</Link>
+              </li>
+              <li>
+                <Link href="/resources" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">Past Papers & Resources</Link>
+              </li>
+              <li>
                 <Link href="/fees" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">Fee Structure</Link>
               </li>
               <li>
