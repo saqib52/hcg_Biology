@@ -43,7 +43,7 @@ export function Hero() {
           </h1>
 
           <p className="text-base sm:text-xl text-ink-black-700 leading-relaxed max-w-2xl mx-auto font-normal">
-            Experience Cambridge IGCSE, O Level, and AS & A Level Biology through qualified instructors, simulator virtual labs, and systematic mark-scheme deconstruction.
+            Experience Cambridge IGCSE, O Level, and AS & A Level Biology through simulator virtual labs, and systematic mark-scheme deconstruction.
           </p>
 
           {/* Tactile Action Buttons */}

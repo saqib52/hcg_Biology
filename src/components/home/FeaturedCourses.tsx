@@ -45,13 +45,12 @@ export function FeaturedCourses() {
               >
                 {/* Card Header Banner with Rich Bluish & Pine-Teal Div Backgrounds */}
                 <div
-                  className={`p-8 text-white relative ${
-                    isFirst
+                  className={`p-8 text-white relative ${isFirst
                       ? 'bg-gradient-to-r from-dark-wine-900 via-dark-wine-800 to-blue-900'
                       : isSecond
-                      ? 'bg-gradient-to-r from-[#243e3a] via-[#35605A] to-[#153e5c]'
-                      : 'bg-gradient-to-r from-[#0c2340] via-[#1a445f] to-[#35605A]'
-                  }`}
+                        ? 'bg-gradient-to-r from-[#243e3a] via-[#35605A] to-[#153e5c]'
+                        : 'bg-gradient-to-r from-[#0c2340] via-[#1a445f] to-[#35605A]'
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-bold bg-white/20 backdrop-blur-md px-3 py-1 rounded-full uppercase tracking-wider border border-white/25">
@@ -104,21 +103,21 @@ export function FeaturedCourses() {
                     </div>
                   </div>
 
-                  {/* Footer with Enrollment Action */}
-                  <div className="pt-5 border-t border-sand-dune-200">
-                    <Link
-                      href={`/admissions?course=${course.id}`}
-                      className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-dark-wine-800 via-[#153e5c] to-pine-teal-700 hover:opacity-95 shadow-md active:scale-[0.98] transition-all text-center"
-                    >
-                      <span>Enroll in this Course</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    {/* Footer with Enrollment Action */}
+                    <div className="pt-5 border-t border-sand-dune-200">
+                      <Link
+                        href={`/admissions?course=${course.id}`}
+                        className="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-dark-wine-800 via-[#153e5c] to-pine-teal-700 hover:opacity-95 shadow-md active:scale-[0.98] transition-all text-center"
+                      >
+                        <span>Enroll in this Course</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
+                );
           })}
-        </div>
+              </div>
 
       </div>
     </section>
