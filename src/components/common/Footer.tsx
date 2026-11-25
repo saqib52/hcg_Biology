@@ -97,6 +97,11 @@ export function Footer() {
             <h4 className="text-xs font-bold text-dark-wine-800 tracking-wider uppercase">Programmes</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
+                <Link href="/courses/igcse-biology" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">
+                  Cambridge IGCSE & O Level (0610 / 5090)
+                </Link>
+              </li>
+              <li>
                 <Link href="/courses/as-level-biology" className="text-ink-black-700 hover:text-dark-wine-700 transition-colors">
                   Cambridge AS Level Biology (9700)
                 </Link>

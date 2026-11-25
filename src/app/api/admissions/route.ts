@@ -8,6 +8,7 @@ function mapWebsiteToGoogleForm(key: string, value: string): string {
   if (!value) return '';
 
   if (key === 'programme') {
+    if (value.includes('IGCSE') || value.includes('O Level')) return 'O-Level / IGCSE';
     if (value.includes('Both') || value.includes('Complete')) return 'A-Level (AS + A2)';
     if (value.includes('A Level') || value === 'A2') return 'A2';
     return 'AS';
@@ -142,12 +143,12 @@ export async function POST(req: NextRequest) {
       errors.city = 'City is required.';
     }
 
-    if (!programme || !['AS Level Biology', 'A Level Biology', 'Both AS & A Level'].includes(programme)) {
+    if (!programme || !['AS Level Biology', 'A Level Biology', 'Both AS & A Level', 'IGCSE / O Level Biology'].includes(programme)) {
       errors.programme = 'Please select a valid academic programme.';
     }
 
-    if (!syllabusCode || syllabusCode !== '9700') {
-      errors.syllabusCode = 'Cambridge syllabus code must be 9700.';
+    if (!syllabusCode || (syllabusCode !== '9700' && syllabusCode !== '0610 / 5090' && syllabusCode !== '0610' && syllabusCode !== '5090')) {
+      errors.syllabusCode = 'Valid Cambridge syllabus code required (9700 or 0610 / 5090).';
     }
 
     if (!learningMode || !['Live classes', 'Recorded classes', 'Both'].includes(learningMode)) {

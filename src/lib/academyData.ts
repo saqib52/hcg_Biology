@@ -3,7 +3,7 @@ export interface Course {
   slug: string;
   title: string;
   syllabusCode: string;
-  level: 'AS Level' | 'A Level' | 'AS & A Level Complete';
+  level: 'IGCSE / O Level' | 'AS Level' | 'A Level' | 'AS & A Level Complete';
   tagline: string;
   shortDescription: string;
   fullDescription: string;
@@ -169,6 +169,69 @@ export const ACADEMY_COURSES: Course[] = [
       { paper: 'Paper 4', title: 'A Level Structured Questions', weight: '38.5% of full A Level', duration: '2 hours' },
       { paper: 'Paper 5', title: 'Planning, Analysis and Evaluation', weight: '11.5% of full A Level', duration: '1 hour 15 mins' }
     ]
+  },
+  {
+    id: 'igcse-biology',
+    slug: 'igcse-biology',
+    title: 'Cambridge IGCSE & O Level Biology',
+    syllabusCode: 'Cambridge 0610 / 5090',
+    level: 'IGCSE / O Level',
+    tagline: 'Master core biological principles, exam keywords, and secure your foundational A*.',
+    shortDescription: 'Build unshakeable conceptual foundations across cellular biology, human physiology, plant biology, genetics, and ecology for Cambridge IGCSE (0610) and O Level (5090).',
+    fullDescription: 'The Cambridge IGCSE & O Level Biology course at hCG Biology Academy is meticulously engineered to bridge the gap between textbook rote memorisation and genuine scientific mastery. Led by MS Zoology Gold Medalist Saqib Jawad, this programme takes secondary students step-by-step through the entire Cambridge 0610 / 5090 curriculum. Through high-yield visual illustrations, real-time diagram sketching, and intensive Paper 2 (Multiple Choice), Paper 4 (Extended Theory), and Paper 6 (Alternative to Practical) coaching, learners build the clarity and vocabulary needed to achieve top grades and transition seamlessly into AS & A Level Biology.',
+    teachingMode: 'Interactive Live Online Classes + Full HD Lecture Archive',
+    duration: 'Academic Year / Focused 6-Month Intensive Track',
+    feePlaceholder: 'Contact for Fee (Monthly / Modular Packages Available)',
+    features: [
+      'Comprehensive coverage of all 21 Cambridge IGCSE chapters (0610 / 0970 / 5090)',
+      'High-scoring Paper 2 Multiple Choice deduction and time management strategies',
+      'Step-by-step Paper 4 extended question answering using official Cambridge mark-scheme keywords',
+      'Paper 6 Alternative to Practical masterclass: experimental design, variables, graphs, and drawings',
+      'Downloadable illustrated lecture summary notes and topical question booklets',
+      'Weekly diagnostic homework checks and personal examiner feedback'
+    ],
+    learningOutcomes: [
+      'Master foundational cellular, organ, and ecosystem systems with intuitive visual logic',
+      'Distinguish and accurately apply key Cambridge command words (State, Outline, Describe, Explain, Evaluate)',
+      'Confidently execute scientific calculations: percentage changes, surface area-to-volume ratios, and magnifications',
+      'Excel in experimental design, error identification, table formatting, and accurate biological sketches for Paper 6',
+      'Establish a rock-solid scientific foundation for immediate competitive advantage in Cambridge AS & A Level Biology'
+    ],
+    syllabusOverview: [
+      {
+        unit: 'Section 1: Characteristics & Classification of Living Organisms',
+        topics: ['Characteristics of living organisms (MRS GREN)', 'Concept and use of a classification system', 'Features of organisms (kingdoms, vertebrates, arthropods)', 'Dichotomous keys construction and decoding']
+      },
+      {
+        unit: 'Section 2: Organisation of the Organism, Cells & Transport',
+        topics: ['Cell structure and organisation (plant vs animal cells)', 'Size of specimens and magnification calculations', 'Diffusion, Osmosis, and Active Transport mechanisms in living systems']
+      },
+      {
+        unit: 'Section 3: Biological Molecules, Enzymes & Plant Nutrition',
+        topics: ['Carbohydrates, lipids, proteins, and DNA structure', 'Food tests (Benedict, iodine, biuret, ethanol)', 'Enzyme properties, active sites, denaturation and kinetics', 'Photosynthesis, leaf anatomy, and mineral requirements']
+      },
+      {
+        unit: 'Section 4: Human Physiology (Nutrition, Transport & Gas Exchange)',
+        topics: ['Diet, alimentary canal anatomy, mechanical and chemical digestion', 'Human circulatory system, heart structure, blood vessels, and blood components', 'Gas exchange surface in humans, ventilation mechanism, and effects of smoking']
+      },
+      {
+        unit: 'Section 5: Respiration, Excretion, Coordination & Homeostasis',
+        topics: ['Aerobic and anaerobic respiration in humans and yeast', 'Kidney function, urea excretion, and dialysis vs kidney transplants', 'Nervous system, reflex arcs, eye accommodation and pupil reflex', 'Hormones (adrenaline, insulin, glucagon), homeostasis, and thermoregulation']
+      },
+      {
+        unit: 'Section 6: Reproduction, Genetics & Biotechnology',
+        topics: ['Asexual vs sexual reproduction in plants and humans', 'Menstrual cycle, fertilisation, and STI prevention', 'Chromosomes, mitosis, meiosis, and monohybrid inheritance', 'Genetic modification, biotechnology (fermenters, penicillin), and modern genetic engineering']
+      },
+      {
+        unit: 'Section 7: Ecology & Human Influences on Ecosystems',
+        topics: ['Energy flow, food chains, food webs, and pyramids', 'Carbon and nitrogen cycles', 'Population size dynamics and human impacts (pollution, deforestation, climate change, and conservation)']
+      }
+    ],
+    assessmentComponents: [
+      { paper: 'Paper 1 / Paper 2', title: 'Multiple Choice (Core / Extended)', weight: '30% of total grade', duration: '45 mins (40 questions)' },
+      { paper: 'Paper 3 / Paper 4', title: 'Theory (Core / Extended Structured)', weight: '50% of total grade', duration: '1 hour 15 mins' },
+      { paper: 'Paper 6', title: 'Alternative to Practical', weight: '20% of total grade', duration: '1 hour' }
+    ]
   }
 ];
 
@@ -209,6 +272,22 @@ export const FEE_TIERS = [
       'Topical Cambridge past paper problem-solving sessions',
       'Weekly homework reviews and mark-scheme guidance',
       'Direct teacher Q&A via dedicated learning group'
+    ]
+  },
+  {
+    id: 'igcse-monthly',
+    name: 'Cambridge IGCSE / O Level Tuition',
+    badge: 'Foundational',
+    pricing: 'Contact for Fee',
+    period: 'per month / modular',
+    description: 'Comprehensive Cambridge 0610/5090 tuition designed for secondary learners to master core concepts, Paper 4 theory, and Paper 6 practicals.',
+    includes: [
+      'Interactive live classes covering full 21-chapter IGCSE/O-Level syllabus',
+      'Paper 2, Paper 4 and Paper 6 systematic past paper drills',
+      'Keyword mastery for Cambridge examiner mark schemes',
+      'Full lecture recording library with on-demand access',
+      'Weekly diagnostic quizzes and error rectification',
+      'Seamless foundation building for AS & A Level Biology'
     ]
   },
   {

@@ -15,10 +15,10 @@ export function FeaturedCourses() {
               Curriculum Offerings
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-ink-black-900 font-heading tracking-tight">
-              Cambridge International Biology (9700)
+              Cambridge International Biology Programmes
             </h2>
             <p className="mt-3 text-base text-ink-black-700 leading-relaxed">
-              Meticulously structured programmes covering both AS and full A Level syllabus requirements with configurable modules.
+              Meticulously structured programmes covering Cambridge IGCSE / O Level (0610 / 5090) and AS & A Level (9700) with interactive live and recorded tracks.
             </p>
           </div>
           <div className="mt-6 md:mt-0">
@@ -33,9 +33,10 @@ export function FeaturedCourses() {
         </div>
 
         {/* Courses Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {ACADEMY_COURSES.map((course, idx) => {
             const isFirst = idx === 0;
+            const isSecond = idx === 1;
 
             return (
               <div
@@ -47,7 +48,9 @@ export function FeaturedCourses() {
                   className={`p-8 text-white relative ${
                     isFirst
                       ? 'bg-gradient-to-r from-dark-wine-900 via-dark-wine-800 to-blue-900'
-                      : 'bg-gradient-to-r from-[#243e3a] via-[#35605A] to-[#153e5c]'
+                      : isSecond
+                      ? 'bg-gradient-to-r from-[#243e3a] via-[#35605A] to-[#153e5c]'
+                      : 'bg-gradient-to-r from-[#0c2340] via-[#1a445f] to-[#35605A]'
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">

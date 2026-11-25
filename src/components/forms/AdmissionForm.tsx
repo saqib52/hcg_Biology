@@ -72,8 +72,8 @@ export function AdmissionForm() {
       errors.programme = 'Please select a programme.';
     }
 
-    if (formData.syllabusCode !== '9700') {
-      errors.syllabusCode = 'Cambridge syllabus code must be 9700.';
+    if (formData.syllabusCode !== '9700' && formData.syllabusCode !== '0610 / 5090' && formData.syllabusCode !== '0610' && formData.syllabusCode !== '5090') {
+      errors.syllabusCode = 'Valid Cambridge syllabus code required (9700 or 0610 / 5090).';
     }
 
     if (!formData.learningMode) {
@@ -81,6 +81,19 @@ export function AdmissionForm() {
     }
 
     return errors;
+  };
+
+  const handleProgrammeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedProg = e.target.value;
+    let newSyllabus = '9700';
+    if (selectedProg === 'IGCSE / O Level Biology') {
+      newSyllabus = '0610 / 5090';
+    }
+    setFormData((prev) => ({
+      ...prev,
+      programme: selectedProg,
+      syllabusCode: newSyllabus,
+    }));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -368,12 +381,13 @@ export function AdmissionForm() {
               <select
                 name="programme"
                 value={formData.programme}
-                onChange={handleChange}
+                onChange={handleProgrammeChange}
                 className="w-full pl-10 pr-4 py-3 rounded-2xl border border-sand-dune-200 text-sm bg-alice-blue-50 text-ink-black-900 focus:outline-none focus:ring-2 focus:ring-[#772222]"
               >
-                <option value="AS Level Biology">AS Level Biology</option>
-                <option value="A Level Biology">A Level Biology (A2)</option>
-                <option value="Both AS & A Level">Both AS & A Level Complete</option>
+                <option value="AS Level Biology">Cambridge AS Level Biology (9700)</option>
+                <option value="A Level Biology">Cambridge A Level Biology - A2 (9700)</option>
+                <option value="Both AS & A Level">Cambridge AS & A Level Complete (9700)</option>
+                <option value="IGCSE / O Level Biology">Cambridge IGCSE & O Level Biology (0610 / 5090)</option>
               </select>
             </div>
           </div>
@@ -389,7 +403,9 @@ export function AdmissionForm() {
               readOnly
               className="w-full px-4 py-3 rounded-2xl border border-sand-dune-200 bg-sand-dune-50 text-sm font-semibold text-ink-black-900 cursor-not-allowed"
             />
-            <span className="text-[10px] text-ink-black-700 mt-1 block">Cambridge International 9700</span>
+            <span className="text-[10px] text-ink-black-700 mt-1 block">
+              {formData.programme === 'IGCSE / O Level Biology' ? 'Cambridge IGCSE 0610 / O Level 5090' : 'Cambridge International 9700'}
+            </span>
           </div>
 
           <div>
